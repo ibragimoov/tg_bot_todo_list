@@ -129,6 +129,8 @@ async def handle_get_tasks(message: Message):
 async def catalog(message: Message):
     await message.answer('Выберите категорию товара', reply_markup=await kb.categories())
 
+#
+#
 
 @router.callback_query(F.data.startswith('category_'))
 async def category(callback: CallbackQuery):
